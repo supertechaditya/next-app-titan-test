@@ -1,5 +1,7 @@
-import '@/styles/globals.css'
+import "@/styles/globals.css";
+import { makeServer } from "@/mock-api/server";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  makeServer();
+  return <Component {...pageProps} />;
 }
