@@ -1,0 +1,148 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  height: 100vh;
+  background: #000000;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 100px 20px;
+  gap: 30px;
+
+  width: 503px;
+  height: 100vh;
+}
+
+.textarea {
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+
+  height: 100vh;
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+
+  color: #ffffff;
+
+  background: #1a1a1a;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: -0.25px;
+
+  /* White */
+
+  color: #ffffff;
+}
+
+.selectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  width: 431px;
+  height: 390px;
+}
+.selectionbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 6px;
+
+  width: 431px;
+  height: 85px;
+
+  /* Grey-10 */
+
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.selectionbox:hover {
+  border: 2px solid #dfbc68;
+}
+
+.selectionheading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  /* Grey-50 */
+
+  color: #bdbdbd;
+}
+.selectiondescription {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Grey-30 */
+
+  color: #757575;
+}
+
+.selectedBox {
+  border: 1px solid #dfbc68;
+}
+
+.selectedText {
+  color: #ffffff;
+}
+
+.button {
+  padding: 24px 16px;
+
+  width: 423px;
+  height: 64px;
+
+  /* Brand-2 */
+  text-align: center;
+  background: #dfbc68;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: #000000;
+}
+
+.environmenttext {
+  color: #dfbc68;
+  text-transform: uppercase;
+  display: inline;
+  margin-left: 4px;
+}
+
+.doneColor {
+  color: green;
+  display: inline;
+  font-weight: bold;
+  margin-left: 4px;
+}

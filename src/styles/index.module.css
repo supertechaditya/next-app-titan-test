@@ -1,0 +1,22 @@
+.button {
+  padding: 24px 16px;
+
+  width: 423px;
+  height: 64px;
+
+  /* Brand-2 */
+  text-align: center;
+  background: #dfbc68;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: #000000;
+}
