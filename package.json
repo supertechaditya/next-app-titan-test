@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "standard && next lint",
     "storybook": "start-storybook -p 6006",
@@ -14,6 +14,7 @@
     "@next/font": "13.1.6",
     "next": "13.1.6",
     "react": "18.2.0",
+    "react-collapse": "^5.1.1",
     "react-dom": "18.2.0",
     "typewriter-effect": "^2.19.0"
   },

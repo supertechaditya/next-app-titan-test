@@ -1,12 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { Collapse } from "react-collapse";
 import styles from "./solution.module.css";
 
 const SolutionDescription = () => {
   const [text, setText] = useState("");
   const [onFocus, setOnFocus] = useState(false);
   const [summary, setSummary] = useState("Loading...");
+  const [isExpanded, setIsExpanded] = useState(false);
   useEffect(() => {
     const callAPI = async () => {
       try {
@@ -49,7 +50,7 @@ const SolutionDescription = () => {
                 }}
               >
                 <div style={{ width: "100%" }}></div>
-                <Image
+                <img
                   src="/tick.svg"
                   className={styles.pointer}
                   width={20}
@@ -58,7 +59,7 @@ const SolutionDescription = () => {
                     setOnFocus(false);
                   }}
                 />
-                <Image
+                <img
                   src="/cross.svg"
                   className={styles.pointer}
                   width={20}
@@ -70,7 +71,6 @@ const SolutionDescription = () => {
                 />
               </div>
             )}
-            {/* <p className={styles.selectiondescription}>{environment.description}</p> */}
           </div>
         </div>
         <Link href="/solution" className={styles.button}>
@@ -81,6 +81,57 @@ const SolutionDescription = () => {
         <div className={styles.materialsdata}>
           <p className={styles.selectionheading}>Summary</p>
           <p className={styles.selectiondescription}>{summary}</p>
+        </div>
+        <div>
+          <Collapse isOpened={!isExpanded}>
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                setIsExpanded(true);
+              }}
+            >
+              <p>Environment</p>
+              <img
+                src="/down.svg"
+                className={styles.pointer}
+                width={20}
+                height={20}
+              />
+            </div>
+          </Collapse>
+          <Collapse isOpened={isExpanded}>
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src="/down.svg"
+                style={{ transform: "rotate(180deg)" }}
+                className={styles.pointer}
+                width={20}
+                height={20}
+                onClick={() => {
+                  setIsExpanded(false);
+                }}
+              />
+              <div className={styles.materialsdata}>
+                <p className={styles.selectionheading}>Summary</p>
+                <p className={styles.selectiondescription}>{summary}</p>
+              </div>
+            </div>
+          </Collapse>
         </div>
       </div>
     </div>
